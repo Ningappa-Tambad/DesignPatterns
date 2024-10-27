@@ -1,21 +1,22 @@
 package ParkingLot.DTOS;
 
+import ParkingLot.models.Gate;
 import ParkingLot.models.Vehicle;
 import ParkingLot.models.VehicleType;
 
 public class IssueTicketRequestDto
 {
-    private Long id;
+    private Long gateId;
     private String vehicleNumber;
     private VehicleType vehicleType;
     private String ownerName;
 
-    public Long getId() {
-        return id;
+    public Long getGateId() {
+        return gateId;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.gateId = id;
     }
 
     public VehicleType getVehicleType() {
