@@ -11,7 +11,7 @@ public class Client1
 
         //From flutter, we should be able to get the factory based on platform
 
-        UIFactory uiFactory= flutter.getUIFactory(Platform.MAC);
+        UIFactory uiFactory= flutter.getUIFactory(Platform.ANDROID);
 
         Button button=uiFactory.createButton();
         button.displayButton();

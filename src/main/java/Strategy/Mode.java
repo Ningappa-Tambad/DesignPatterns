@@ -1,2 +1,5 @@
-package Strategy;public enum Mode {
+package Strategy;
+
+public enum Mode {
+    CAR,BIKE,WALK
 }

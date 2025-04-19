@@ -17,27 +17,7 @@ public class Flutter {
 
     public UIFactory getUIFactory(Platform platform)
     {
-       if(platform.equals(platform.ANDROID))
-       {
-           return new AndroidUIFactory();
-       }
-       else if (platform.equals(Platform.IOS))
-       {
-           return new IOSUIFactory();
-       }
-       else if (platform.equals(Platform.MAC))
-       {
-          return new MACUIFactory();
-       }
-       else if(platform.equals(Platform.WINDOWS))
-       {
-           return new WIndowsUIFactory();
-       }
-       return null;
-
-
-
-
+        return UiFactoryHelper.getUIFactory(platform);
     }
 
 
