@@ -1,7 +1,6 @@
 package PrototypeEx;
 
-public class Client2
-{
+public class Client2 {
     public static void main(String[] args) {
 
         StudentRegistry studentregistry = new StudentRegistry();
@@ -9,36 +8,37 @@ public class Client2
         fillRegistery(studentregistry);
 
 
-        Student raj=studentregistry.getKey("Aug23 evening batch").clone();
-
+        Student raj = studentregistry.getKey("Aug23 evening batch").clone();
         raj.setName("Rajkumar");
         raj.setAge(25);
         raj.setPsp(90);
-       Student raj2=studentregistry.getKey("Aug23 evening batch").clone();
+
+        Student raj2 = studentregistry.getKey("Aug23 evening batch").clone();
         raj2.setName("Vishnu");
         raj2.setAge(26);
         raj2.setPsp(95);
+
+        Student Ningappa = studentregistry.getKey("Aug23 Inteligent student").clone();
 
         System.out.println("DEBUG");
 
     }
 
-    private static void fillRegistery(StudentRegistry studentregistry)
-    {
+    private static void fillRegistery(StudentRegistry studentregistry) {
 
 
-        Student aug23eveningbatch=new Student();
-
+        Student aug23eveningbatch = new Student();
         aug23eveningbatch.setBatch("Aug23 evening batch");
         aug23eveningbatch.setBatchavgpsp(75);
-
         studentregistry.Register("Aug23 evening batch", aug23eveningbatch);
 
 
-       Student inteligentStudent=new InteligentStudent();
-       inteligentStudent.setBatch("Aug23 evening batch");
-       inteligentStudent.setBatchavgpsp(75);
-       studentregistry.Register("Aug23 evening batch", inteligentStudent);
+      Student inteligentStudent = new InteligentStudent();
+        inteligentStudent.setBatch("Aug23 evening batch");
+        inteligentStudent.setBatchavgpsp(75);
+
+
+        studentregistry.Register("Aug23 Inteligent student", inteligentStudent);
 
 
     }

@@ -4,18 +4,17 @@ public class InteligentStudent extends Student {
 
     private int iq;
 
+    InteligentStudent() {
+    }
+
+    InteligentStudent(InteligentStudent student) {
+        super(student);
+        this.iq=student.iq;
+    }
+
     @Override
     public InteligentStudent clone() {
-        InteligentStudent inteligentStudent = new InteligentStudent();
-
-        inteligentStudent.setName(this.getName());
-        inteligentStudent.setAge(this.getAge());
-        inteligentStudent.setBatch(this.getBatch());
-        inteligentStudent.setPsp(this.getPsp());
-        inteligentStudent.setBatchavgpsp(this.getBatchavgpsp());
-
-        inteligentStudent.iq = this.iq;
-        return inteligentStudent;
+       return new InteligentStudent(this);
 
     }
 }

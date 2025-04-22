@@ -19,6 +19,11 @@ public class User
         this.username = username;
     }
 
+    /**
+     * Retrieves the password of the user.
+     *
+     * @return the password as a String.
+     */
     public String getPassword() {
         return password;
     }
